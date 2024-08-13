@@ -19,6 +19,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
+  text-size-adjust: none;
 }
 
 #header {
@@ -51,6 +52,16 @@ body {
   top: 40px;
   margin-bottom: auto;
   max-width: 300px;
+}
+
+@media (orientation: portrait) {
+  #content {
+    grid-template-columns: auto;
+  }
+
+  #sidebar {
+    position: static;
+  }
 }
 
 .info {
