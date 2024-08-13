@@ -53,16 +53,6 @@ body {
   max-width: 300px;
 }
 
-@media (orientation: portrait) {
-  #content {
-    grid-template-columns: auto;
-  }
-
-  #sidebar {
-    position: static;
-  }
-}
-
 .info {
   padding: 10px;
   margin-bottom: 40px;
@@ -168,24 +158,22 @@ body {
 .icon,
 .image,
 .small-image {
-  border-radius: 5px;
   float: right;
+  margin: 0 0 10px 10px;
+  border-radius: 5px;
 }
 
 .icon {
-  width: 100px;
-  margin: 0 0 10px 10px;
+  max-width: 100px;
 }
 
 .image {
-  width: 400px;
-  margin: 0 0 40px 40px;
+  max-width: 400px;
   clear: both;
 }
 
 .small-image {
-  width: 200px;
-  margin: 0 0 40px 40px;
+  max-width: 200px;
 }
 
 table,
@@ -208,4 +196,28 @@ td {
 
 th {
   text-align: left;
+}
+
+@media (orientation: portrait) {
+  #banner {
+    width: 200vw;
+  }
+
+  #content {
+    grid-template-columns: auto;
+  }
+
+  #sidebar {
+    position: static;
+  }
+
+  .image {
+    max-width: 300px;
+    float: none;
+    margin: 0 0 40px;
+  }
+
+  .small-image {
+    max-width: 100px;
+  }
 }
