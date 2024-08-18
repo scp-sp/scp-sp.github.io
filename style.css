@@ -77,9 +77,10 @@ h2 {
   margin-bottom: 10px;
 }
 
-del {
+code {
   color: #f2f3f4;
   background-color: #1b1b1b;
+  font-family: "JetBrains Mono", monospace;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -207,15 +208,16 @@ th {
 
   nav {
     position: static;
+    max-width: 100%;
   }
 
   .image {
-    max-width: 300px;
+    max-width: 100%;
     float: none;
     margin: 0 0 40px;
   }
 
   .small-image {
-    max-width: 100px;
+    max-width: 150px;
   }
 }
