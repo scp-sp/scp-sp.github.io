@@ -5,11 +5,7 @@ window.addEventListener("scroll", () => {
 const params = new URLSearchParams(window.location.search);
 const access = params.get("access");
 
-if (access != 1) {
-	document.querySelectorAll(".private").forEach(element => {
-		element.remove();
-	});
-} else {
+if (access == 1) {
 	document.querySelectorAll("a").forEach(anchor => {
 		if (anchor.href.endsWith(".html")) {
 	    	anchor.href += "?access=1";
@@ -17,6 +13,10 @@ if (access != 1) {
 	});
 
 	document.querySelectorAll(".public").forEach(element => {
+		element.remove();
+	});
+} else {
+	document.querySelectorAll(".private").forEach(element => {
 		element.remove();
 	});
 }
