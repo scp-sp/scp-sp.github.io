@@ -5,10 +5,10 @@ window.addEventListener("scroll", () => {
 const params = new URLSearchParams(window.location.search);
 const access = params.get("access");
 
-if (access == 1) {
+if (access == "full") {
 	document.querySelectorAll("a").forEach(anchor => {
 		if (anchor.href.endsWith(".html")) {
-	    	anchor.href += "?access=1";
+	    	anchor.href += "?access=full";
 		}
 	});
 
