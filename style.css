@@ -64,12 +64,15 @@ a:hover {
   text-decoration: underline;
 }
 
-p:has(+ p) {
+p:has(+ p, + ol, + ul) {
   margin-bottom: 20px;
 }
 
-p:has(+ h2),
-p:has(+ img) {
+p:has(+ h2, + img) {
+  margin-bottom: 40px;
+}
+
+p:last-child {
   margin-bottom: 40px;
 }
 
@@ -97,6 +100,10 @@ ol {
 
 :is(ul, ol):has(+ p) {
   margin-bottom: 20px;
+}
+
+:is(ul, ol):has(+ h2) {
+  margin-bottom: 40px;
 }
 
 table,
