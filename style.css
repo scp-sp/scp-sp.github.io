@@ -64,15 +64,15 @@ a:hover {
   text-decoration: underline;
 }
 
-p:has(+ p, + ol, + ul) {
+p:has(+ p) {
   margin-bottom: 20px;
 }
 
-p:has(+ h2, + img) {
-  margin-bottom: 40px;
+p:has(+ ol, + ul, + .addendum) {
+  margin-bottom: 10px;
 }
 
-p:last-child {
+p:has(+ h2, + img) {
   margin-bottom: 40px;
 }
 
@@ -115,6 +115,7 @@ td {
 
 table {
   margin-bottom: 40px;
+  background-color: #E5E5E5;
 }
 
 tr,
@@ -191,12 +192,12 @@ th {
   max-width: 200px;
 }
 
-.euclid {
-  color: darkorange;
-}
-
 .safe {
   color: darkgreen;
+}
+
+.euclid {
+  color: darkorange;
 }
 
 .keter {
@@ -205,6 +206,14 @@ th {
 
 .explained {
   list-style-type: circle;
+}
+
+.addendum {
+  padding: 10px;
+  margin-bottom: 40px;
+  background-color: #E5E5E5;
+  border: 2px solid #1b1b1b;
+  border-style: dashed;
 }
 
 @media (orientation: portrait) {
