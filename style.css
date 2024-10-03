@@ -115,7 +115,7 @@ td {
 
 table {
   margin-bottom: 40px;
-  background-color: #E5E5E5;
+  background-color: #e6e7e8;
 }
 
 tr,
@@ -130,8 +130,8 @@ th {
 
 .info {
   padding: 10px;
-  border: 2px solid #1b1b1b;
-  border-radius: 5px;
+  background-color: #e6e7e8;
+  border: 2px dashed; #1b1b1b;
 }
 
 .warning {
@@ -176,7 +176,6 @@ th {
 .small-image {
   float: right;
   margin: 0 0 20px 20px;
-  border-radius: 5px;
 }
 
 .icon {
@@ -211,9 +210,8 @@ th {
 .addendum {
   padding: 10px;
   margin-bottom: 40px;
-  background-color: #E5E5E5;
-  border: 2px solid #1b1b1b;
-  border-style: dashed;
+  background-color: #e6e7e8;
+  border: 2px dashed #1b1b1b;
 }
 
 @media (orientation: portrait) {
