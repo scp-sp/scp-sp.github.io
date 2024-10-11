@@ -4,17 +4,25 @@
   font-family: "JetBrains Mono";
   src: url("JetBrains Mono Regular.ttf");
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "JetBrains Mono";
   src: url("JetBrains Mono Bold.ttf");
   font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #1b1b1b;
+  --secondary-color: #f2f3f4;
+  --addendum-color: #e4e5e6;
 }
 
 body {
-  color: #1b1b1b;
-  background-color: #1b1b1b;
+  color: var(--primary-color);
+  background-color: var(--primary-color);
   padding-bottom: 40px;
   font-family: "JetBrains Mono", monospace;
   font-size: 18px;
@@ -41,14 +49,12 @@ main {
   gap: 40px;
   grid-template-columns: auto 1fr;
   padding: 40px;
-  background-color: #f2f3f4;
+  background-color: var(--secondary-color);
   border-radius: 10px;
-  box-shadow: 0 0 10px 10px #1b1b1b;
+  box-shadow: 0 0 10px 10px var(--primary-color);
 }
 
 nav {
-  display: grid;
-  gap: 40px;
   position: sticky;
   top: 40px;
   margin-bottom: auto;
@@ -82,8 +88,8 @@ h2 {
 }
 
 code {
-  color: #f2f3f4;
-  background-color: #1b1b1b;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
   font-family: "JetBrains Mono", monospace;
   text-decoration: none;
 }
@@ -106,16 +112,19 @@ ol {
   margin-bottom: 40px;
 }
 
+table {
+  background-color: var(--addendum-color);
+}
+
+table:has(+ h2) {
+  margin-bottom: 40px;
+}
+
 table,
 tr,
 th,
 td {
-  border: 2px solid #1b1b1b;
-}
-
-table {
-  margin-bottom: 40px;
-  background-color: #e6e7e8;
+  border: 2px solid var(--primary-color);
 }
 
 tr,
@@ -128,10 +137,14 @@ th {
   text-align: left;
 }
 
-.info {
+.addendum {
   padding: 10px;
-  background-color: #e6e7e8;
-  border: 2px dashed; #1b1b1b;
+  background-color: var(--addendum-color);
+  border: 2px dashed var(--primary-color);
+}
+
+.addendum:has(+ h2, + .addendum) {
+  margin-bottom: 40px;
 }
 
 .warning {
@@ -145,7 +158,7 @@ th {
 }
 
 .warning strong {
-  font-size: 35px;
+  font-size: 36px;
   font-weight: bold;
   line-height: 48px;
 }
@@ -154,8 +167,8 @@ th {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f2f3f4;
-  background-color: #1b1b1b;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
   margin: 0 auto;
   width: 200px;
   height: 40px;
@@ -165,10 +178,6 @@ th {
 
 .button:hover {
   text-decoration: underline;
-}
-
-.button p {
-  margin-bottom: 0;
 }
 
 .icon,
@@ -205,13 +214,6 @@ th {
 
 .explained {
   list-style-type: circle;
-}
-
-.addendum {
-  padding: 10px;
-  margin-bottom: 40px;
-  background-color: #e6e7e8;
-  border: 2px dashed #1b1b1b;
 }
 
 @media (orientation: portrait) {
