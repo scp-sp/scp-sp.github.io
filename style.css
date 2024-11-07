@@ -179,24 +179,36 @@ th {
   text-decoration: underline;
 }
 
-.icon,
 .image,
-.small-image {
+.icon {
   float: right;
   margin: 0 0 20px 20px;
 }
 
-.icon {
-  max-width: 100px;
-}
-
 .image {
-  max-width: 400px;
+  width: 400px;
+  max-width: 100%;
   clear: both;
 }
 
-.small-image {
-  max-width: 200px;
+.image.small {
+  width: 200px;
+}
+
+.image.wide {
+  width: 500px;
+}
+
+.image.extra-wide {
+  width: 600px;
+}
+
+.icon {
+  width: 100px;
+}
+
+.icon.big {
+  width: 200px;
 }
 
 .safe {
@@ -231,12 +243,12 @@ th {
   }
 
   .image {
-    max-width: 100%;
+    width: 100%;
     float: none;
     margin: 0 0 40px;
   }
 
-  .small-image {
-    max-width: 150px;
+  .icon.big {
+    width: 150px;
   }
 }
