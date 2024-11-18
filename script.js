@@ -7,8 +7,8 @@ const access = params.get("access");
 
 if (access == "full") {
 	document.querySelectorAll("a").forEach(anchor => {
-		if (anchor.href.endsWith(".html")) {
-	    	anchor.href += "?access=full";
+		if (!anchor.href.includes("?access=full")) {
+	    	anchor.href = anchor.href.replace(".html", ".html?access=full");
 		}
 	});
 

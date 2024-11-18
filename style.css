@@ -142,7 +142,7 @@ th {
   border: 2px dashed var(--primary-color);
 }
 
-.addendum:has(+ h2, + .addendum) {
+.addendum:has(+ h2, + .addendum, + .warning) {
   margin-bottom: 40px;
 }
 
